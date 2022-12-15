@@ -20,10 +20,15 @@ func main() {
 	users := make(map[string]user)
 
 	// Add key/value pairs to the map.
-	users["Roy"] = user{"Rob", "Roy"}
+	firstUser := user{"Rob", "Roy"}
+	users["Roy"] = firstUser
 	users["Ford"] = user{"Henry", "Ford"}
-	users["Mouse"] = user{"Mickey", "Mouse"}
+	thirdUser := user{"Mickey", "Mouse"}
+	users["Mouse"] = thirdUser
 	users["Jackson"] = user{"Michael", "Jackson"}
+
+	firstUser.name = "changed"
+	thirdUser.name = "changed3"
 
 	// Read the value at a specific key.
 	mouse := users["Mouse"]

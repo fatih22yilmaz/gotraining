@@ -23,15 +23,15 @@ func (u *user) notify() {
 
 // admin represents an admin user with privileges.
 type admin struct {
-	person user // NOT Embedding
-	level  string
+	user  // NOT Embedding
+	level string
 }
 
 func main() {
 
 	// Create an admin user.
 	ad := admin{
-		person: user{
+		user: user{
 			name:  "john smith",
 			email: "john@yahoo.com",
 		},
@@ -39,5 +39,5 @@ func main() {
 	}
 
 	// We can access fields methods.
-	ad.person.notify()
+	ad.notify()
 }

@@ -16,14 +16,27 @@ func main() {
 	increment(count)
 
 	println("count:\tValue Of[", count, "]\tAddr Of[", &count, "]")
+
+	// Pass the "value of" the count.
+	incrementPtr(&count)
+
+	println("count:\tValue Of[", count, "]\tAddr Of[", &count, "]")
 }
 
 // increment declares count as a pointer variable whose value is
 // always an address and points to values of type int.
+//
 //go:noinline
 func increment(inc int) {
 
 	// Increment the "value of" inc.
 	inc++
 	println("inc:\tValue Of[", inc, "]\tAddr Of[", &inc, "]")
+}
+
+func incrementPtr(inc *int) {
+
+	// Increment the "value of" inc.
+	*inc++
+	println("incPtr:\tValue Of[", *inc, "]\tAddr Of[", inc, "]")
 }

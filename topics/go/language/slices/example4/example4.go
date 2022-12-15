@@ -28,15 +28,16 @@ func main() {
 			// Calculate the percent of change.
 			capChg := float64(cap(data)-lastCap) / float64(lastCap) * 100
 
-			// Save the new values for capacity.
-			lastCap = cap(data)
-
 			// Display the results.
-			fmt.Printf("Addr[%p]\tIndex[%d]\t\tCap[%d - %2.f%%]\n",
+			fmt.Printf("Addr[%p]\tIndex[%d]\t\tCap[%d - %2.f%%]\t\tlastCap[%d]\n",
 				&data[0],
 				record,
 				cap(data),
-				capChg)
+				capChg,
+				lastCap)
+
+			// Save the new values for capacity.
+			lastCap = cap(data)
 		}
 	}
 }

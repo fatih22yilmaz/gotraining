@@ -9,7 +9,7 @@ import "fmt"
 func main() {
 
 	// Using the pointer semantic form of the for range.
-	friends := [5]string{"Annie", "Betty", "Charley", "Doug", "Edward"}
+	/*friends := [5]string{"Annie", "Betty", "Charley", "Doug", "Edward"}
 	fmt.Printf("Bfr[%s] : ", friends[1])
 
 	for i := range friends {
@@ -18,18 +18,18 @@ func main() {
 		if i == 1 {
 			fmt.Printf("Aft[%s]\n", friends[1])
 		}
-	}
+	}*/
 
 	// Using the value semantic form of the for range.
-	friends = [5]string{"Annie", "Betty", "Charley", "Doug", "Edward"}
-	fmt.Printf("Bfr[%s] : ", friends[1])
+	friends := [5]string{"Annie", "Betty", "Charley", "Doug", "Edward"}
+	//fmt.Printf("Bfr[%s] : ", friends[1])
 
 	for i, v := range friends {
-		friends[1] = "Jack"
-
+		fmt.Printf("Addr friends[i]: [%p], Value of friends[i]: [%s], Addr v: [%p], Value of v: [%s]\n", &friends[i], friends[i], &v, v)
+		/*friends[1] = "Jack"
 		if i == 1 {
 			fmt.Printf("v[%s]\n", v)
-		}
+		}*/
 	}
 
 	// Using the value semantic form of the for range but with pointer

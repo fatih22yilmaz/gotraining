@@ -30,7 +30,7 @@ func main() {
 	// the interface.
 	// - Checks would need to be performed at runtime to know anything about
 	// the data stored in the empty interface.
-	// - Decouple around well defined behavior and only use the empty
+	// - Decouple around well-defined behavior and only use the empty
 	// interface as an exception when it is reasonable and practical to do so.
 }
 

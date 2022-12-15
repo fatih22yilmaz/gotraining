@@ -32,3 +32,5 @@ _testmain.go
 *.exe
 //*.test
 .vscode/tasks.json
+
+*.DS_Store

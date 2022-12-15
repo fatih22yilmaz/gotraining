@@ -12,7 +12,7 @@ type user struct {
 }
 
 func main() {
-
+	//TODO super important
 	// Declare a slice of 3 users.
 	users := make([]user, 3)
 
@@ -21,6 +21,7 @@ func main() {
 
 	// Add a like for the user that was shared.
 	shareUser.likes++
+	users[2].likes++
 
 	// Display the number of likes for all users.
 	for i := range users {
@@ -32,6 +33,8 @@ func main() {
 
 	// Add another like for the user that was shared.
 	shareUser.likes++
+
+	users[2].likes++
 
 	// Display the number of likes for all users.
 	fmt.Println("*************************")

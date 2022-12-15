@@ -5,7 +5,9 @@
 // arrays of different types.
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
